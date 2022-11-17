@@ -8,7 +8,7 @@ def hello_name(request):
     message = request.GET.get('message', None)
 
     if not name or not message:
-        return HttpResponse(" Please enter name OR message params to GET request")
+        return HttpResponse(" Please enter name AND message params to GET request")
     else:
         return HttpResponse(f'Hello {name}! {message}')
 
